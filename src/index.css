@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #059669;
+  --color-primary-dark: #065F46;
+  --color-study: #F59E0B;
+  --color-quiz: #3B82F6;
+  --color-global: #8B5CF6;
+  --color-app-bg: #F0F9FF;
+  --color-card-bg: #FFFFFF;
+  --color-text-main: #1E293B;
+  --color-text-muted: #64748B;
+}
+
+@layer base {
+  body {
+    @apply bg-app-bg text-text-main;
+  }
+}
