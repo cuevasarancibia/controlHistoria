@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Map } from 'lucide-react';
 import Menu from './components/Menu';
 import StudyMaterial from './components/StudyMaterial';
@@ -15,7 +15,17 @@ import { QUESTIONS } from './data/questions';
 export default function App() {
   const [view, setView] = useState('menu');
   const [currentTopic, setCurrentTopic] = useState(null);
-  const [globalSeen, setGlobalSeen] = useState<number[]>([]);
+  
+  // Cargar progreso guardado en el navegador al iniciar
+  const [globalSeen, setGlobalSeen] = useState<number[]>(() => {
+    const saved = localStorage.getItem('geochile_progress');
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  // Guardar progreso en el navegador cada vez que cambie
+  useEffect(() => {
+    localStorage.setItem('geochile_progress', JSON.stringify(globalSeen));
+  }, [globalSeen]);
 
   const progressPercentage = Math.round((globalSeen.length / QUESTIONS.length) * 100) || 0;
 
