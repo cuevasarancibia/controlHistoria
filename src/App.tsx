@@ -10,11 +10,14 @@ import StudyMaterial from './components/StudyMaterial';
 import TopicSelection from './components/TopicSelection';
 import Quiz from './components/Quiz';
 import GlobalQuiz from './components/GlobalQuiz';
+import { QUESTIONS } from './data/questions';
 
 export default function App() {
   const [view, setView] = useState('menu');
   const [currentTopic, setCurrentTopic] = useState(null);
   const [globalSeen, setGlobalSeen] = useState<number[]>([]);
+
+  const progressPercentage = Math.round((globalSeen.length / QUESTIONS.length) * 100) || 0;
 
   const renderView = () => {
     switch (view) {
@@ -53,7 +56,7 @@ export default function App() {
               <p className="text-text-muted font-medium mt-1">¿Qué zona de Chile exploraremos hoy?</p>
             </div>
             <div className="bg-emerald-100 text-emerald-800 px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider">
-              Tu Progreso: 75% Completado
+              Tu Progreso: {progressPercentage}% Completado
             </div>
           </div>
         )}
