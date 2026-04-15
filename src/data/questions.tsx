@@ -132,7 +132,6 @@ const RAW_QUESTIONS: [number, string, string[], number][] = [
   [11, "Debido a las mayores lluvias, ¿cómo son los ríos en la Zona Sur?", ["Secos", "Con muy poca agua", "Caudalosos (llevan mucha agua) y navegables algunos", "Salados"], 2],
   [11, "El clima 'Semiárido' es la transición entre el desierto y el clima templado. Corresponde al...", ["Norte Grande", "Zona Sur", "Norte Chico", "Zona Austral"], 2],
   [11, "En la Zona Central, los ríos aumentan su agua (caudal) en primavera y verano gracias a...", ["Las lluvias torrenciales de verano", "El deshielo de la nieve en la Cordillera de los Andes", "Las mareas altas", "La camanchaca"], 1],
-  [11, "Un 'régimen mixto' en un río significa que se alimenta de...", ["Solo lluvia", "Solo nieve", "Lluvia en invierno y deshielo en verano", "Agua de mar"], 2],
   [11, "¿Qué clima tiene veranos cálidos/secos e inviernos fríos/lluviosos (ideal para vivir)?", ["Mediterráneo (Zona Central)", "Polar", "Desértico", "Estepárico"], 0],
   [11, "En la Zona Austral, el clima extremo genera paisajes dominados por...", ["Cactus y dunas", "Glaciares y campos de hielo", "Palmeras", "Playas cálidas"], 1],
   [11, "¿Cómo influyen los Andes en el clima de Chile?", ["Atrapan el viento del mar", "Actúan como barrera que impide el paso de la humedad y nubes desde Argentina", "Hacen que haga calor", "Secan el mar"], 1],
